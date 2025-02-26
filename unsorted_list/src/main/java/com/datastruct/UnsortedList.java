@@ -1,4 +1,4 @@
-package datastruct;
+package com.datastruct;
 
 /**
  * Interface defining a list where items are not sorted

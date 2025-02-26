@@ -1,4 +1,4 @@
-package datastruct;
+package com.datastruct;
 
 public class ListManipulator {
 
