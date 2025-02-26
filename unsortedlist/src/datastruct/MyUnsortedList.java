@@ -1,4 +1,4 @@
-package com.datastruct;
+package datastruct;
 
 import java.util.Arrays;
 
@@ -98,9 +98,9 @@ public class MyUnsortedList<E> implements UnsortedList<E> {
     }
 
     @Override
-    public E remove(int pos) throws EmptyListException {
+    public E remove(int pos) throws IndexOutOfBoundsException {
         if (pos < 0 || pos >= size) {
-            throw new EmptyListException();
+            throw new IndexOutOfBoundsException();
         }
         if (pos == 0) {
             return pop();
@@ -113,7 +113,7 @@ public class MyUnsortedList<E> implements UnsortedList<E> {
 
         Link<E> removed = prevLink.next;
         prevLink.next = removed.next;
-        size--;
+
         return removed.element;
     }
 
